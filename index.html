@@ -1,0 +1,125 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+
+        <script>
+          function createCORSRequest(url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+              // Check if the XMLHttpRequest object has a "withCredentials" property.
+              // "withCredentials" only exists on XMLHTTPRequest2 objects.
+              xhr.withCredentials = true;
+              xhr.open('GET', url, true);
+              xhr.send();
+            } else if (typeof XDomainRequest != "undefined") {
+              // Otherwise, check if XDomainRequest.
+              // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+              xhr = new XDomainRequest();
+              xhr.open('GET', url);
+            } else {
+              // Otherwise, CORS is not supported by the browser.
+              xhr = null;
+            }
+            return xhr;
+          }
+        </script>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Light.dahlo.se</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+<!--     <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+<!--          <h2>All <a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchscene&idx=3&switchcmd=On')">On</a> <a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchscene&idx=3&switchcmd=Off')">Off</a></h2>
+
+          <h2>Scenes</h2>
+
+          <h4><a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchscene&idx=1&switchcmd=On')">Kvällsläge</a></h4>
+
+          <h4><a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchscene&idx=2&switchcmd=On')">Filmläge</a></h4>
+
+          <h2>Sunrise <a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchlight&idx=42&switchcmd=On')">On</a> <a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchlight&idx=42&switchcmd=Off')">Off</a></h2>
+
+          <p><a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchlight&idx=42&switchcmd=Set Level&level=20')">20%</a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchlight&idx=42&switchcmd=Set Level&level=50')">50%</a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="createCORSRequest('//192.168.1.68:8080/json.htm?type=command&param=switchlight&idx=42&switchcmd=Set Level&level=100')">100%</a></p>
+-->
+
+          <h2>All <a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?SceneNum=3&action=RunScene&output_format=json&serviceId=urn%3Amicasaverde-com%3AserviceId%3AHomeAutomationGateway1&id=lu_action')">On</a> <a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?SceneNum=2&action=RunScene&output_format=json&serviceId=urn%3Amicasaverde-com%3AserviceId%3AHomeAutomationGateway1&id=lu_action')">Off</a></h2>
+
+          <h2>Scenes</h2>
+
+          <h4><a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?SceneNum=1&action=RunScene&output_format=json&serviceId=urn%3Amicasaverde-com%3AserviceId%3AHomeAutomationGateway1&id=lu_action')">Kvällsläge</a></h4>
+
+          <h4><a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?SceneNum=4&action=RunScene&output_format=json&serviceId=urn%3Amicasaverde-com%3AserviceId%3AHomeAutomationGateway1&id=lu_action')">Filmläge</a></h4>
+
+          <h2>Sunrise</h2>
+
+          <p><a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?serviceId=urn%3Aupnp-org%3AserviceId%3ADimming1&newLoadlevelTarget=0&action=SetLoadLevelTarget&output_format=json&id=lu_action&DeviceNum=53')">0%</a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?serviceId=urn%3Aupnp-org%3AserviceId%3ADimming1&newLoadlevelTarget=25&action=SetLoadLevelTarget&output_format=json&id=lu_action&DeviceNum=53')">25%</a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?serviceId=urn%3Aupnp-org%3AserviceId%3ADimming1&newLoadlevelTarget=50&action=SetLoadLevelTarget&output_format=json&id=lu_action&DeviceNum=53')">50%</a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="createCORSRequest('http://192.168.1.16:3480/data_request?serviceId=urn%3Aupnp-org%3AserviceId%3ADimming1&newLoadlevelTarget=100&action=SetLoadLevelTarget&output_format=json&id=lu_action&DeviceNum=53')">100%</a></p>
+
+
+          <p><br><br></p>
+
+          <h4><a href="http://192.168.1.16">Full site</a></h4>
+
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p></p>
+      </footer>
+    </div> <!-- /container -->
+
+    </body>
+</html>
